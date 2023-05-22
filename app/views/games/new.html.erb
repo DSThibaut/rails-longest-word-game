@@ -1,0 +1,8 @@
+<%=@letters%>
+
+<form action="score" method="post" data-turbo="false">
+  <input type="text" name="word" placeholder="Type the longest word!">
+  <input type="submit" value='click!'>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :game_letters, @letters%>
+</form>
